@@ -4,6 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base64 CTF Challenge</title>
+    <style>
+        /* Set the body background color */
+        body {
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Set the encoded message text to match the background color */
+        pre {
+            background-color: #f0f0f0; /* Same as body background */
+            color: #f0f0f0; /* Same color as the background so it's hidden */
+            font-size: 18px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Change the color of the encoded text when it's highlighted */
+        pre::selection {
+            color: black; /* Text color when selected */
+            background-color: yellow; /* Background color when selected */
+        }
+
+        /* Optional: Style the form and button */
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Base64 CTF Challenge</h1>
@@ -11,13 +60,13 @@
         We intercepted a suspicious message during a covert operation. Can you decode it to uncover the hidden flag?
     </p>
     <pre>
-        UVYyR0V5QkF4ZU5KZlhaaDlSbnl1Z1U9PQ==
+        eTB1X2YwdW5EX20zCg==
     </pre>
     <p>Hint: The flag format is <code>CTF{...}</code>.</p>
 
-    <h2>Submit Your Flag</h2>
+    <!-- Flag submission form -->
     <form action="submit_flag.php" method="POST">
-        <label for="flag">Enter the flag here:</label>
+        <label for="flag">Enter Flag:</label>
         <input type="text" id="flag" name="flag" required>
         <button type="submit">Submit Flag</button>
     </form>
