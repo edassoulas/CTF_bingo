@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base64 CTF Challenge</title>
+    <title>CTF Challenge</title>
     <style>
-        /* Set the body background color */
+
         body {
             background-color: #f0f0f0; /* Light gray background */
             font-family: Arial, sans-serif;
             padding: 20px;
         }
 
-        /* Set the encoded message text to match the background color */
         pre {
-            background-color: #f0f0f0; /* Same as body background */
-            color: #f0f0f0; /* Same color as the background so it's hidden */
+            background-color: #f0f0f0;
+            color: #f0f0f0;
             font-size: 18px;
             }
 
-        /* Change the color of the encoded text when it's highlighted */
         pre::selection {
-            color: black; /* Text color when selected */
-            background-color: yellow; /* Background color when selected */
+            color: black;
+            background-color: yellow;
         }
 
         form {
@@ -53,7 +51,7 @@
 <body>
     <h1>Base64 CTF Challenge</h1>
     <p>
-        We intercepted a suspicious message during a covert operation. Can you decode it to uncover the hidden flag?
+        Can you find and decode the hidden flag?
     </p>
     <pre>
         eTB1X2YwdW5EX20zCg==
@@ -71,7 +69,7 @@
         // JavaScript to handle flag submission
         const correctFlag = "CTF{y0u_f0unD_m3}";
 
-        // Get the form and flag input
+        // Get form and flag input
         const flagForm = document.getElementById("flagForm");
         const flagInput = document.getElementById("flag");
 
