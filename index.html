@@ -17,10 +17,7 @@
             background-color: #f0f0f0; /* Same as body background */
             color: #f0f0f0; /* Same color as the background so it's hidden */
             font-size: 18px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+            }
 
         /* Change the color of the encoded text when it's highlighted */
         pre::selection {
@@ -28,7 +25,6 @@
             background-color: yellow; /* Background color when selected */
         }
 
-        /* Optional: Style the form and button */
         form {
             margin-top: 20px;
         }
@@ -65,11 +61,32 @@
     <p>Hint: The flag format is <code>CTF{...}</code>.</p>
 
     <!-- Flag submission form -->
-    <form action="submit_flag.php" method="POST">
+    <form id="flagForm">
         <label for="flag">Enter Flag:</label>
         <input type="text" id="flag" name="flag" required>
         <button type="submit">Submit Flag</button>
     </form>
+
+    <script>
+        // JavaScript to handle flag submission
+        const correctFlag = "CTF{y0u_f0unD_m3}";
+
+        // Get the form and flag input
+        const flagForm = document.getElementById("flagForm");
+        const flagInput = document.getElementById("flag");
+
+        flagForm.addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent form submission
+
+            const submittedFlag = flagInput.value.trim();  // Get the user input
+
+            if (submittedFlag === correctFlag) {
+                alert("Flag correct! Well done!");
+            } else {
+                alert("Incorrect flag. Try again!");
+            }
+        });
+    </script>
 </body>
 </html>
 
